@@ -49,6 +49,7 @@ public sealed class AirlockSystem : SharedAirlockSystem
         if (TryComp<AppearanceComponent>(uid, out var appearanceComponent))
         {
             Appearance.SetData(uid, DoorVisuals.Powered, args.Powered, appearanceComponent);
+            Appearance.SetData(uid, DoorVisuals.ClosedLights, true);
         }
 
         if (!TryComp(uid, out DoorComponent? door))
